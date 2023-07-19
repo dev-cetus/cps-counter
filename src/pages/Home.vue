@@ -47,13 +47,13 @@ function reset() {
         <div class="flex flex-col items-center">
             <p class="text-xl text-white py-4">{{ timer }}s</p>
             <div v-if="useGameState != 'finish'"
-                 class="bg-orange-500/80 ring-1 ring-orange-800 h-96 md:w-1/2 rounded-lg flex justify-center items-center text-gray-600 font-bold text-sm md:text-xl select-none cursor-pointer"
+                 class="bg-orange-500/80 ring-1 ring-orange-800 h-96 md:w-1/2 rounded-lg flex justify-center items-center text-gray-600 font-bold text-sm md:text-xl select-none cursor-pointer w-full mx-4"
                  @click="startCpsCounter">
                 <p v-if="clicks != 0">{{ clicks }}</p>
                 <p v-else class="px-4 md:px-0 text-center">Click in the orange rectangle to start</p>
             </div>
             <div v-else @click="reset"
-                 class="ring-1 ring-gray-900 h-96 w-1/2 text-white flex flex-col justify-center items-center select-none rounded-lg cursor-pointer" id="resetBox">
+                 class="ring-1 ring-gray-900 h-96 md:w-1/2 text-white flex flex-col justify-center items-center select-none rounded-lg cursor-pointer text-sm md:text-xl px-4 md:px-0 text-center w-full mx-4" id="resetBox">
                 <p>~{{ clicksPreSecond }} clicks per second, GG!</p>
                 <p>Click in the box to restart</p>
             </div>
